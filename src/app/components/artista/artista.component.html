@@ -11,6 +11,31 @@
         </p>
     </div>
     <div class="col-4 text-right">
-        <button routerLink="/search" routerLinkActive="router-link-active"  class="btn btn-outline-danger">Regresar</button>
+        <button routerLink="/search" routerLinkActive="router-link-active"
+            class="btn btn-outline-danger">Regresar</button>
+    </div>
+</div>
+
+
+<div class="row m-5">
+    <div class="col">
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>Foto</th>
+                    <th>Album</th>
+                    <th>Canción</th>
+                    <th>Vista previa</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let tracks of topTracks">
+                    <td><img [src]="tracks.album.images | noimage" class="img-thumb" alt=""></td>
+                    <td>{{tracks.album.name}}</td>
+                    <td>{{tracks.name}}</td>
+                    <td><audio [src]="tracks.preview_url" controls></audio></td>
+                </tr>
+            </tbody>
+        </table>
     </div>
 </div>
