@@ -1,4 +1,6 @@
 <app-loading *ngIf="loadingArtist"></app-loading>
+
+<div class="alert alert-danger animated fadeIn "><h3>Error</h3><p>Tienes un error</p></div>
 <div class="row animated fadeIn" *ngIf="!loadingArtist">
     <div class="col-2">
         <img [src]="artista.images | noimage" class=" img-thumbnail img-circle">
