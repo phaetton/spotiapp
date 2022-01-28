@@ -20,7 +20,7 @@ export class SearchComponent implements OnInit {
   buscar(termino: string) {
     this.loading = true;
     console.log(termino);
-    this.spotiappSvc.getArtista(termino)
+    this.spotiappSvc.getArtistas(termino)
       .subscribe((data: any) => {
         // this.artistas = data.artists.items;
         this.artistas = data;
